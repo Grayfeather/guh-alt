@@ -265,18 +265,43 @@ PORTFOLIO
 }
 
 .portfolio-item .mask i{
+    
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 11%;
+	left: 11%;
 	margin-top:-25px;
 	margin-left: -25px;
-	width: 50px;
 	height: 50px;
 	color: #fff;
-	background-color: #fa694e;
-	text-align: center;
-	line-height: 50px;
-	font-size: 30px;
+	line-height: 20px;
+	font-size: 24px;
+    list-style-type: none;
+
+}
+.project-description {
+	top: 11%;
+	left: 11%;
+	margin: 25px;
+    
+	height: 50px;
+	color: #fff;
+	line-height: 20px;
+	font-size: 20px;
+    list-style-type: none;
+}
+
+.project-title{
+    font-size: 24px;
+    text-align: center;
+}
+.project-details{
+    	color: #fff;
+}
+.project-details.project-evaluation{
+        color:#3bb223;
+        font-weight: bold;
+        font-size: 23px;
+        text-align: end;
 }
 
 .portfolio-item:hover .mask{
@@ -416,4 +441,14 @@ ul.social-icons > li > a{
 	.jumbotron .h1 {
 		font-size: 75px;
 	}
+}
+
+.container.shrinkable-content{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.form-group{
+    margin-left: 10%;
+    margin-right: 10%;
 }
