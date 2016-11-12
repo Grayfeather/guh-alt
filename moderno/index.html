@@ -62,17 +62,16 @@ $(document).ready(function(){
 		</div>
 	</div>
 	<!-- Services section start -->
-	<section id="services">     
+	<section id="services"> 
+        <h1 style="text-align: center;">Share your project!</h1>
          <form class="form-horizontal">
              <fieldset>
                 <!-- Form Name -->
-                <legend>Form Name</legend>
-
                 <!-- Text input-->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="name">Project Name</label>  
                   <div class="col-md-4">
-                  <input id="name" name="name" type="text" placeholder="" class="form-control input-md" required="">
+                  <input id="name" name="name" type="text" placeholder="" class="form-control input-md" required="" maxlength="40">
 
                   </div>
                 </div>
@@ -81,7 +80,7 @@ $(document).ready(function(){
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="decrLong">Long description</label>
                   <div class="col-md-4">                     
-                    <textarea class="form-control" id="decrLong" name="decrLong"></textarea>
+                    <textarea class="form-control" id="decrLong" name="decrLong" maxlength="4000"></textarea>
                   </div>
                 </div>
 
@@ -89,7 +88,7 @@ $(document).ready(function(){
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="exSummary">Executive Summary</label>  
                   <div class="col-md-6">
-                  <input id="exSummary" name="exSummary" type="text" placeholder="" class="form-control input-md" required="">
+                  <input id="exSummary" name="exSummary" type="text" placeholder="" class="form-control input-md" required="" maxlength="400">
                   <span class="help-block">400 characters max</span>  
                   </div>
                 </div>
@@ -98,7 +97,7 @@ $(document).ready(function(){
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="dateStart">Foundation date</label>  
                   <div class="col-md-2">
-                  <input id="dateStart" name="dateStart" type="text" placeholder="MM/YY" class="form-control input-md" required="">
+                  <input id="dateStart" name="dateStart" type="text" placeholder="MM/YY" class="form-control input-md" required="" maxlength="5">
 
                   </div>
                 </div>
@@ -108,14 +107,13 @@ $(document).ready(function(){
                   <label class="col-md-4 control-label" for="industry">Industry / Area of Operation</label>
                   <div class="col-md-4">
                     <div class="input-group">
-                      <input id="industry" name="industry" class="form-control" placeholder="" type="text" required="">
                       <div class="input-group-btn">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                           Choose
                           <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu pull-right">
-                          <li><a href="#">Option one</a></li>
+                          <li><a href="">Option one</a></li>
                           <li><a href="#">Option two</a></li>
                           <li><a href="#">Option three</a></li>
                         </ul>
@@ -129,7 +127,6 @@ $(document).ready(function(){
                   <label class="col-md-4 control-label" for="audience">Audience of your Product/Service</label>
                   <div class="col-md-4">
                     <div class="input-group">
-                      <input id="audience" name="audience" class="form-control" placeholder="" type="text" required="">
                       <div class="input-group-btn">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                           Choose
@@ -149,10 +146,12 @@ $(document).ready(function(){
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="employess">Number of people on the team</label>  
                   <div class="col-md-2">
-                  <input id="employess" name="employess" type="text" placeholder="" class="form-control input-md" required="">
+                  <input id="employess" name="employess" type="number" placeholder="" class="form-control input-md" required="" maxlength="3">
 
                   </div>
-                </div>
+                 </div>
+                <a class="btn btn-primary">Browse Projects</a>
+
 
                 </fieldset>
                 </form>
@@ -278,7 +277,6 @@ $(document).ready(function(){
 
 	<script type="text/javascript" src="js/smooth-scroll.js"></script>
 
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
 	<!-- Load custom js for theme -->
 	<script type="text/javascript" src="js/app.js"></script>
