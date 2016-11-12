@@ -19,7 +19,33 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
 
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 </head>
 <body>
 	<div class="jumbotron home home-fullscreen" id="home">
@@ -27,9 +53,8 @@
 		<!-- Offsite navigation -->
 		<div class="container">
 			<div class="header-info">
-				<h1>Moderno</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua.
+				<h1>WELCOME</h1>
+				<p>Here you can submit and browse great start up ideas,<br> get immidiate feedback on your idea and maybe even get funding from Goldman Sachs
 				</p>
 				<a href="#services" class="btn btn-primary">Submit a project</a>
 				<a href="#portfolio" class="btn btn-primary">Browse Projects</a>
@@ -37,73 +62,108 @@
 		</div>
 	</div>
 	<!-- Services section start -->
-	<section id="services">
-		<div class="parentcontainer">
-<<<<<<< Updated upstream
-		
-			<div class="container">
-                		<div class="form-group">
-                			<label for="exampleSelect1">Audience of Product/Service: </label>
-                			<select class="form-control" id="exampleSelect1">
-                  				<option>B2B</option>
-                  				<option>B2C</option>
-                  				<option>Both</option>
-                			</select>
-                		</div>
-                	<div class="form-group">
-                			<label for="exampleSelect2">Domain/Area: </label>
-                			<select class="form-control" id="exampleSelect2">
-                  				<option>Aerospace Industry</option>
-                  				<option>Agriculture</option>
-                  				<option>Chemical</option>
-                  				<option>Computer</option>
-                  				<option>Education</option>
-                			</select>
-                	</div>
-            	</div>
-=======
-		<div class="container">
-			  <div class="form-group">
-				<label for="exampleSelect1">1. Type of event </label>
-				<select class="form-control" id="exampleSelect1">
-				  <option>Date</option>
-				  <option>Wedding</option>
-				  <option>Party</option>
-				  <option>Conference</option>
-				</select>
-				</div>
-				  <div class="form-group">
-				<label for="exampleSelect2">2. Number of people</label>
-				<select class="form-control" id="exampleSelect2">
-				  <option>under 10</option>
-				  <option>10-20</option>
-				  <option>20-50</option>
-				  <option>50-100</option>
-				  <option>over 100</option>
-				</select>
-				</div>
-				<div class="form-group">
-				<label for="exampleSelect3">3. Type of food</label>
-				<select class="form-control" id="exampleSelect1">
-				  <option>Gluten-free</option>
-				  <option>Vegan</option>
-				  <option>Japanese</option>
-				  <option>Chinese</option>
-				  <option>Regular</option>
-				</select>
-				</div>
-		</div>
-	</div>
->>>>>>> Stashed changes
-	</section>
+	<section id="services">     
+         <form class="form-horizontal">
+             <fieldset>
+                <!-- Form Name -->
+                <legend>Form Name</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="name">Project Name</label>  
+                  <div class="col-md-4">
+                  <input id="name" name="name" type="text" placeholder="" class="form-control input-md" required="">
+
+                  </div>
+                </div>
+
+                <!-- Textarea -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="decrLong">Long description</label>
+                  <div class="col-md-4">                     
+                    <textarea class="form-control" id="decrLong" name="decrLong"></textarea>
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="exSummary">Executive Summary</label>  
+                  <div class="col-md-6">
+                  <input id="exSummary" name="exSummary" type="text" placeholder="" class="form-control input-md" required="">
+                  <span class="help-block">400 characters max</span>  
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="dateStart">Foundation date</label>  
+                  <div class="col-md-2">
+                  <input id="dateStart" name="dateStart" type="text" placeholder="MM/YY" class="form-control input-md" required="">
+
+                  </div>
+                </div>
+
+                <!-- Button Drop Down -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="industry">Industry / Area of Operation</label>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <input id="industry" name="industry" class="form-control" placeholder="" type="text" required="">
+                      <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                          Choose
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu pull-right">
+                          <li><a href="#">Option one</a></li>
+                          <li><a href="#">Option two</a></li>
+                          <li><a href="#">Option three</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Button Drop Down -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="audience">Audience of your Product/Service</label>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <input id="audience" name="audience" class="form-control" placeholder="" type="text" required="">
+                      <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                          Choose
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu pull-right">
+                          <li><a href="#">B2B</a></li>
+                          <li><a href="#">B2C</a></li>
+                          <li><a href="#">Both</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="employess">Number of people on the team</label>  
+                  <div class="col-md-2">
+                  <input id="employess" name="employess" type="text" placeholder="" class="form-control input-md" required="">
+
+                  </div>
+                </div>
+
+                </fieldset>
+                </form>
+    </section>
 	<!-- Services section end -->
 	<!-- Portfolio section start -->
 	<section id="portfolio" class="darker">
 		<div class="container">
 			<header>
 				<h2>Success Stories</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor.
+				<p>Here we present the best project people have submitted 
 				</p>
 			</header>
 			<div id="single-project"></div>
@@ -126,41 +186,71 @@
 				<figure class="portfolio-item col-md-4 col-sm-6" >
 					<img class="img-responsive" src="img/projects/project-thumbnail-1.png" alt="Adena icons pack" />
 					<figcaption class="mask">
-						<a href="projects/project-1.html">
-							<i class="glyphicon glyphicon-plus"></i>
-						</a>
+						<div class="project-description">
+                            <h3 class="project-title">Ala ma kota</h3>
+                            <p class="project-details">
+                                This is an amazing project. We search web for cute cats for you to share on your Facebook feed.
+						  </p>
+                            <p class="project-details project-evaluation">
+                                Score: 120
+                            </p>
+                        </div>
 					</figcaption>
 				</figure>
 				<figure class="portfolio-item col-md-4 col-sm-6" >
 					<img class="img-responsive" src="img/projects/project-thumbnail-1.png" alt="Adena icons pack" />
 					<figcaption class="mask">
-						<a href="projects/project-1.html">
-							<i class="glyphicon glyphicon-plus"></i>
-						</a>
+						<div class="project-description">
+                            <h3 class="project-title">Ala ma kota</h3>
+                            <p class="project-details">
+                                This is an amazing project. We search web for cute cats for you to share on your Facebook feed.
+						  </p>
+                            <p class="project-details project-evaluation">
+                                Score: 120
+                            </p>
+                        </div>
 					</figcaption>
 				</figure>
 				<figure class="portfolio-item col-md-4 col-sm-6" >
 					<img class="img-responsive" src="img/projects/project-thumbnail-1.png" alt="Adena icons pack" />
 					<figcaption class="mask">
-						<a href="projects/project-1.html">
-							<i class="glyphicon glyphicon-plus"></i>
-						</a>
+						<div class="project-description">
+                            <h3 class="project-title">Ala ma kota</h3>
+                            <p class="project-details">
+                                This is an amazing project. We search web for cute cats for you to share on your Facebook feed.
+						  </p>
+                            <p class="project-details project-evaluation">
+                                Score: 120
+                            </p>
+                        </div>
 					</figcaption>
 				</figure>
 				<figure class="portfolio-item col-md-4 col-sm-6" >
 					<img class="img-responsive" src="img/projects/project-thumbnail-1.png" alt="Adena icons pack" />
 					<figcaption class="mask">
-						<a href="projects/project-1.html">
-							<i class="glyphicon glyphicon-plus"></i>
-						</a>
+						<div class="project-description">
+                            <h3 class="project-title">Ala ma kota</h3>
+                            <p class="project-details">
+                                This is an amazing project. We search web for cute cats for you to share on your Facebook feed.
+						  </p>
+                            <p class="project-details project-evaluation">
+                                Score: 120
+                            </p>
+                        </div>
 					</figcaption>
 				</figure>
 				<figure class="portfolio-item col-md-4 col-sm-6" >
 					<img class="img-responsive" src="img/projects/project-thumbnail-1.png" alt="Adena icons pack" />
 					<figcaption class="mask">
-						<a href="projects/project-1.html">
-							<i class="glyphicon glyphicon-plus"></i>
-						</a>
+						<div class="project-description">
+                            <h3 class="project-title">Ala ma kota</h3>
+                            <p class="project-details">
+                                This is an amazing project. We search web for cute cats for you to share on your Facebook feed.
+						  </p>
+                            <p class="project-details project-evaluation">
+                                Score: 120
+                            </p>
+                        </div>
 					</figcaption>
 				</figure>
 			</div>
