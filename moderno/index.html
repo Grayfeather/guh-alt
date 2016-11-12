@@ -104,18 +104,18 @@ $(document).ready(function(){
 
                 <!-- Button Drop Down -->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="industry">Industry / Area of Operation</label>
+                  <label class="col-md-4 control-label" for="area">Industry / Area of Operation</label>
                   <div class="col-md-4">
                     <div class="input-group">
                       <div class="input-group-btn">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="area">
                           Choose
                           <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu pull-right">
-                          <li><a href="">Option one</a></li>
-                          <li><a href="#">Option two</a></li>
-                          <li><a href="#">Option three</a></li>
+                          <li><a href="#" id="area1">Option one</a></li>
+                          <li><a href="#" id="area2">Option two</a></li>
+                          <li><a href="#" id="area3">Option three</a></li>
                         </ul>
                       </div>
                     </div>
@@ -128,14 +128,14 @@ $(document).ready(function(){
                   <div class="col-md-4">
                     <div class="input-group">
                       <div class="input-group-btn">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="audience">
                           Choose
                           <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu pull-right">
-                          <li><a href="#">B2B</a></li>
-                          <li><a href="#">B2C</a></li>
-                          <li><a href="#">Both</a></li>
+                          <li><a href="#" id="audience1">B2B</a></li>
+                          <li><a href="#" id="audience2">B2C</a></li>
+                          <li><a href="#" id="audience3">Both</a></li>
                         </ul>
                       </div>
                     </div>
@@ -144,13 +144,13 @@ $(document).ready(function(){
 
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="employess">Number of people on the team</label>  
+                  <label class="col-md-4 control-label" for="employees">Number of people on the team</label>  
                   <div class="col-md-2">
-                  <input id="employess" name="employess" type="number" placeholder="" class="form-control input-md" required="" maxlength="3">
+                  <input id="employees" name="employees" type="number" placeholder="" class="form-control input-md" required="" maxlength="3">
 
                   </div>
                  </div>
-                <a class="btn btn-primary">Browse Projects</a>
+                <a class="btn btn-primary">Submit</a>
 
 
                 </fieldset>
