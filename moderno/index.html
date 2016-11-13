@@ -20,6 +20,9 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="math.js"></script>
+    <script src="./js/teamScript.js"></script>
+    
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links
@@ -160,15 +163,15 @@ $(document).ready(function(){
 
 								 <!-- Text input-->
 								 <div class="form-group">
-									 <label class="col-md-4 control-label" for="funding">Funding (Amount in Pounds)</label>
+									 <label class="col-md-4 control-label" for="funding">Already available funding (Amount in Pounds)</label>
 									 <div class="col-md-6">
 									 <input id="funding" name="funding" type="number" placeholder="" class="form-control input-md" required="" maxlength="400">
 									 	<span class="help-block">400 characters max</span>
 									 </div>
 								 </div>
 
-                <a class="btn btn-primary">Submit</a>
-
+                <a class="btn btn-primary" onClick="getInput()">Submit</a>
+                <p style="font-size=30px;" id="result">alalla</p>
 
                 </fieldset>
                 </form>
@@ -272,6 +275,17 @@ $(document).ready(function(){
 			</div>
 		</div>
 	</section>
+    
+    <section id="investment" class="darker">
+        <div class="container">
+            <input type="range" oninput="updateEvaluation()" min="1000" max="10000000" id="moneyInv"/>
+            <input type="range" oninput="updateEvaluation()" min="1" max="10" step="0.5" id="timeInv"/>
+            <p id="currentValue">asdas</p>
+            <p id="currentYears">asdas</p>
+
+            <p id="ROIresult">result</p>
+        </div>
+    </section>
     
 	<!-- Contact section end -->
 	<!-- Footer start -->
